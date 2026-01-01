@@ -11,5 +11,6 @@
 #
 # Uncomment a feed source
 # sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
-
+sed -ri "s/192.168.1.1/10.66.52.41" package/base-files/files/bin/config_generate
+sed -ri "s/192.168./10.66./" package/base-files/files/bin/config_generate
+sed -ri "s/255.255.255.0/255.255.255.192" package/base-files/files/bin/config_generate
